@@ -14,36 +14,36 @@ export default function Header() {
     >
       <div className="container flex justify-between items-center h-full px-2 md:px-6 lg:px-8 xl:px-12 mx-auto">
         <div className="flex flex-wrap gap-1 md:gap-2 lg:gap-4 md:h-full items-center">
-          <Link target="_blank" href={"mailto:info@cloudrudramedia.com"}>
+          <Link target="_blank" href={"mailto:karthipersonal2003@gmail.com"}>
             <div className="flex gap-1 hover:underline lg:gap-2 py-1">
               <MailIcon className="w-5 h-5" />
-              <p className="text-sm">info@cloudrudramedia.com</p>
+              <p className="text-sm">karthipersonal2003@gmail.com</p>
             </div>
           </Link>
           <div className="hidden md:block md:border border-r-0 opacity-60 md:h-full"></div>
           <div className="flex gap-1 text-sm hover:underline lg:gap-2 py-1">
             <PhoneIcon />
-            <a href="tel:+91 90296 90500">+91 90296 90500</a>
+            <a href="tel:+91 6381410754">+91 6381410754</a>
           </div>
         </div>
 
-        <div className="pointer-events-none flex gap-1 md:gap-2 lg:gap-3 md:h-full md:items-center -ml-3">
-          <div className="md:h-full md:border border-r-0 opacity-60"></div>
+        <div className="flex gap-1 md:gap-2 lg:gap-3 md:h-full md:items-center -ml-3">
+          {/* <div className="md:h-full md:border border-r-0 opacity-60"></div>
           <Link target="_blank" href={"https://www.facebook.com/"}>
             <FacebookIcon />
-          </Link>
+          </Link> */}
           <div className="md:border border-r-0 md:h-full opacity-60"></div>
-          <Link target="_blank" href={"https://www.instagram.com/"}>
+          <Link target="_blank" href={"https://www.instagram.com/naughtyff_yt"}>
             <InstagramIcon />
           </Link>
           <div className="md:border border-r-0 md:h-full opacity-60"></div>
-          <Link target="_blank" href={"https://www.linkedin.com/"}>
+          <Link target="_blank" href={"https://www.linkedin.com/in/karthikeyan-yt16"}>
             <LinkedinIcon />
           </Link>
-          <div className="md:border border-r-0 md:h-full opacity-60"></div>
+          {/* <div className="md:border border-r-0 md:h-full opacity-60"></div>
           <Link target="_blank" href={"https://www.twitter.com/"}>
             <TwitterIcon />
-          </Link>
+          </Link> */}
           <div className="md:border border-r-0 md:h-full opacity-60"></div>
         </div>
       </div>

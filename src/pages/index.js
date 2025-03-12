@@ -13,7 +13,7 @@ import BlogSection from "@/components/blog-section";
 import Service from "@/components/service";
 
 const inter = Inter({ subsets: ["latin"] });
-//demo
+
 
 export default function Home() {
   return (

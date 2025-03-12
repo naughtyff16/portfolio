@@ -6,35 +6,44 @@ import NextIcon from "./icons/next-icon";
 
 const Banner = [
   {
-    title: "Optimize IT to drive greater company value.",
+    title: "Crafting Scalable Web Solutions with Next.js & Django",
     description:
-      "Achieve complete visibility, control, security, and reliability across every system, application, process, and workflow!",
-    buttonText: "Talk to an expert",
-    buttonURL: "/services",
+      "I build modern, scalable, and high-performance web applications using cutting-edge technologies like Next.js, Django, and FastAPI.",
+    buttonText: "View My Projects",
+    // buttonURL: "/projects",
+    buttonURL: "/",
+    // image: "/images/web-dev.png",
+    image: "/images/two-laptops.png",
+  },
+
+  {
+    title: "Machine Learning & AI for Real-World Applications",
+    description:
+      "From ancient Tamil script recognition to intelligent detection systems, I leverage AI to solve real-world problems.",
+    buttonText: "Explore My AI Work",
+    buttonURL: "/",
+    // buttonURL: "/machine-learning",
+    // image: "/images/ml-ai.png",
     image: "/images/two-laptops.png",
   },
   {
-    title: "Transform your business with our IT consulting services.",
+    title: "Bridging Creativity & Code in Frontend Development",
     description:
-      "Cloud Rudra Media offers expert IT consulting services that utilize cutting-edge technology to help you succeed.",
-    buttonText: "Explore the Full IT Life Cycle",
-    buttonURL: "/services",
+      "I turn Figma designs into stunning, user-friendly interfaces using React, Tailwind CSS, and Next.js.",
+    buttonText: "See My UI/UX Work",
+    buttonURL: "/",
+    // buttonURL: "/frontend",
+    // image: "/images/frontend-design.png",
     image: "/images/two-laptops.png",
   },
   {
-    title: "Cloud transformation drives growth and innovation.",
+    title: "From Gaming to Code: My Journey in Free Fire & E-Sports",
     description:
-      "Maximize your business potential with secure and scalable IT cloud consulting solutions.",
-    buttonText: "Transform using Cloud",
-    buttonURL: "/services",
-    image: "/images/two-laptops.png",
-  },
-  {
-    title: "Outsource IT for cost-effective and simplified operations",
-    description:
-      "Cloud Rudra Media offers IT outsourcing for maximum agility and scalability.",
-    buttonText: "Consider IT Outsourcing.",
-    buttonURL: "/services",
+      "With 700K+ subscribers on YouTube as Naughty FF, I blend gaming and content creation with software development expertise.",
+    buttonText: "Check My E-Sports Journey",
+    buttonURL: "/",
+    // buttonURL: "/gaming",
+    // image: "/images/gaming.png",
     image: "/images/two-laptops.png",
   },
 ];
@@ -71,8 +80,8 @@ export default function HeroBanner() {
         className="max-w-full mx-auto"
         infiniteLoop={true}
         stopOnHover={false}
-        // renderArrowNext={nextArrow}
-        // renderArrowPrev={prevArrow}
+        renderArrowNext={nextArrow}
+        renderArrowPrev={prevArrow}
         showArrows={false}
         autoPlay={true}
         interval={5000}
@@ -101,16 +110,15 @@ export default function HeroBanner() {
             </div>
 
             <div className="relative w-full h-full col-span-1 lg:col-span-2 order-first lg:order-last">
-              <div className="w-full h-full relative">
-                <Image
-                  src={item.image}
-                  width={1400}
-                  height={900}
-                  quality={100}
-                  alt="Banner"
-                  className="w-full h-full object-cover"
-                />
-              </div>
+              <div className="absolute inset-0 bg-gradient-to-r from-black/15 to-transparent z-10"></div>
+              <Image
+                src={item.image}
+                width={1400}
+                height={900}
+                quality={100}
+                alt="Banner"
+                className="w-full h-full object-cover"
+              />
             </div>
           </div>
         ))}
