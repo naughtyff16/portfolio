@@ -3,29 +3,24 @@ import RadioIcon from "../icons/radio-icon";
 
 const milestones = [
   {
-    title: "Cloud Rudra Media Visualization",
+    title: "Frontend:",
     description:
-      "We envisioned Cloud Rudra Media as a full-lifecycle IT company that provides scalable technology solutions based on business requirements.",
+      "Next.js, React.js, Redux, JavaScript, HTML, CSS, Tailwind CSS",
   },
   {
-    title: "Company Registration",
+    title: "Backend:",
     description:
-      "We finally registered our IT company and are ready to empower clients with our services that make a significant difference.",
+      "Django, Flask, FastAPI, Python, SQL, MongoDB, Strapi CMS",
   },
   {
-    title: "Establishing the Team",
+    title: "Data Analysis:",
     description:
-      "We took on the hiring process, recruited talent, and built a team of 25+ specialists dedicated to our client's success.",
+      "Python (Pandas, NumPy, MatPlotLib), TensorFlow, PowerBI, Jupyter NoteBook, MySQL, Excel",
   },
   {
     title: "First Successful Project",
     description:
       "We completed our IT company's first successful project for our clients with the help of our dedicated crew.",
-  },
-  {
-    title: "We are still thriving and expanding",
-    description:
-      "Cloud Rudra Media is now a rapidly expanding software development company that specializes in digital transformation around the world.",
   },
 ];
 
@@ -33,22 +28,10 @@ export default function () {
   return (
     <section className="w-full h-auto bg-gray-100 relative">
       <div className="container mx-auto py-12 px-4 md:px-12 lg:px-16">
-        <div className="text-start mb-10 grid lg:grid-cols-2 items-start">
-          <div className="space-y-5">
-            <p className="text-lg text-primary font-medium">
-              IT Support for Business
-            </p>
-            <h1 className="text-3xl font-bold">
-              We convert imagination into reality!
-            </h1>
+        <div className="flex mb-5 items-center justify-center">
+          <div className="inline-block bg-primary text-white text-sm font-semibold px-4 py-2 rounded-full animate-bounce hover:animate-none">
+            My Skills & Expertise
           </div>
-          <p className="mt-4 text-gray-700 text-base text-justify">
-            Cloud Rudra Media is your reliable partner in the fields of digital
-            innovation and information technology, committed to providing
-            exceptional flagship experiences. Our cutting-edge IT consulting
-            solutions ensure smooth operations, while our high-quality software
-            powers your digital transformation.
-          </p>
         </div>
 
         <div className="w-full h-auto relative z-10">

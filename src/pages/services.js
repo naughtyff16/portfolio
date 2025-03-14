@@ -1,6 +1,6 @@
 import Header from "@/components/header";
 import MainHeader from "@/components/main-header";
-import { Inter } from "next/font/google";
+import { Inter, Roboto_Serif } from "next/font/google";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Footer from "@/components/footer";
@@ -15,7 +15,7 @@ import ServiceTwoColumn from "@/components/services/service-two-column";
 import ClientFeedback from "@/components/services/client-feedback";
 import ContactService from "@/components/services/contact-service";
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = Roboto_Serif({ subsets: ["latin"] });
 
 export default function Services() {
   return (

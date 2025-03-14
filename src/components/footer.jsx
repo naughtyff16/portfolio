@@ -18,13 +18,18 @@ const menuItems = [
 ];
 export default function () {
   return (
-    <section id="contact" className="relative w-full h-auto bg-[#454545]">
+    <section
+      id="contact"
+      className="relative w-full h-auto bg-[#454545] dark:bg-darkBg dark:text-darkText
+      border-t-2 border-transparent dark:border-t-primary 
+      dark:shadow-[0px_-5px_10px_#00bfff]"
+    >
       <div className=" text-white py-8 mx-auto px-4 md:px-12 lg:px-16">
         <div className="flex flex-col gap-6">
           <div className="flex md:flex-row flex-col md:justify-between gap-6">
             <Link href={"/"}>
               <Image
-                 src={"/images/my-profile.png"}
+                src={"/images/my-profile.png"}
                 width={1400}
                 height={1000}
                 quality={100}
@@ -39,7 +44,10 @@ export default function () {
                   <p>Facebook</p>
                 </div>
               </Link> */}
-              <Link target="_blank" href={"https://www.instagram.com/naughtyff_yt"}>
+              <Link
+                target="_blank"
+                href={"https://www.instagram.com/naughtyff_yt"}
+              >
                 <div className="flex gap-2 hover:text-primary">
                   <InstagramIcon className="text-primary w-5 h-5" />
                   <p>Instagram</p>
@@ -51,7 +59,10 @@ export default function () {
                   <p>Twitter</p>
                 </div>
               </Link> */}
-              <Link target="_blank" href={"https://www.linkedin.com/in/karthikeyan-yt16"}>
+              <Link
+                target="_blank"
+                href={"https://www.linkedin.com/in/karthikeyan-yt16"}
+              >
                 <div className="flex gap-2 hover:text-primary">
                   <LinkdinIcon className="text-primary w-5 h-5" />
                   <p>Linkdin</p>
@@ -65,10 +76,13 @@ export default function () {
           <div className="grid md:grid-cols-2">
             <div className="flex flex-col justify-center space-y-8 md:border-r-[0.1px] border-opacity-5">
               <p className="text-4xl font-bold font-serif ">
-              Have an idea? <br /> Let's bring it to life!
+                Have an idea? <br /> Let's bring it to life!
               </p>
               <div class="flex flex-wrap gap-6">
-                <Link target="_blank" href={"mailto:karthipersonal2003@gmail.com"}>
+                <Link
+                  target="_blank"
+                  href={"mailto:karthipersonal2003@gmail.com"}
+                >
                   <div className="flex gap-2 items-center hover:text-primary hover:underline">
                     <MailIcon className="text-primary w-5 h-5" />
                     <p>karthipersonal2003@gmail.com</p>
@@ -86,7 +100,9 @@ export default function () {
 
             <div className="flex md:justify-center md:items-center">
               <div className="flex flex-col mb-2 lg:mb-5">
-                <p className="font-bold text-xl py-6 uppercase">Quick Links & Services</p>
+                <p className="font-bold text-xl py-6 uppercase">
+                  Quick Links & Services
+                </p>
                 <div className="flex gap-20">
                   <ul className="text-sm space-y-2 flex flex-col items-start">
                     {menuItems.map((item, index) => (
@@ -97,12 +113,12 @@ export default function () {
                   </ul>
                   <ul className="text-sm space-y-2 flex flex-col items-start">
                     <li className="py-1 hover:text-primary">
-                    Software Development
+                      Software Development
                     </li>
+                    <li className="py-1 hover:text-primary">Web Development</li>
                     <li className="py-1 hover:text-primary">
-                    Web Development
+                      Frontend Development
                     </li>
-                    <li className="py-1 hover:text-primary">Frontend Development</li>
                     <li className="py-1 hover:text-primary">API Development</li>
                   </ul>
                 </div>

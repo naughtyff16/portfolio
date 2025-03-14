@@ -1,98 +1,53 @@
+"use client";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { EffectCards } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/effect-cards";
 import Image from "next/image";
 
-export default function () {
+const skills = [
+  { name: "HTML", img: "/images/services-1.png" },
+  { name: "CSS", img: "/images/css.png" },
+  { name: "JavaScript", img: "/images/javascript.png" },
+  { name: "React", img: "/images/react.png" },
+  { name: "Next.js", img: "/images/nextjs.png" },
+  { name: "Tailwind CSS", img: "/images/tailwind.png" },
+];
+
+export default function SkillsSection() {
   return (
     <section id="products" className="h-auto relative w-full bg-[#F6F3F3]">
       <div className="container mx-auto py-12 px-4 md:px-12 lg:px-16 flex flex-col">
-        <div className="flex flex-col justify-center items-start lg:items-center gap-4 pb-4 lg:pb-8">
-          <p className="text-lg text-primary font-medium py-1">
-            Products Lineup
-          </p>
-          <p className="text-3xl font-bold">
-            IT Products for Seamless Operations
-          </p>
-        </div>
-        <div className="grid lg:grid-cols-3 gap-4 lg:gap-6 container lg:mx-auto w-full h-full justify-center py-4">
-          <div className="w-full relative flex flex-col h-full">
-            <Image
-              src={"/images/product1.png"}
-              width={1400}
-              height={1000}
-              alt="who we are image"
-              className="h-full"
-            />
-            <div className="z-10">
-              <div className="absolute bottom-12 w-auto space-y-5">
-                <div>
-                  <span className="left-0 bg-primary px-2 py-2 text-white rounded-sm text-sm">
-                    Cut Costs Without Compromising Performance
-                  </span>
-                </div>
-                <div className="flex px-2 py-2 bg-white text-black rounded-sm text-sm text-justify">
-                  Optimize your IT investments with our innovative products.
-                  Designed to drive efficiency and productivity, our solutions
-                  deliver long-term savings and exceptional value.
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="w-full relative flex flex-col h-full">
-            <Image
-              src={"/images/product2.png"}
-              width={1400}
-              height={1000}
-              alt="who we are image"
-              className="h-full"
-            />
-            <div className="z-10">
-              <div className="absolute bottom-12 w-auto space-y-5">
-                <div>
-                  <span className="left-0 bg-primary px-2 py-2 text-white rounded-sm text-sm">
-                    Unmatched Quality and Reliability
-                  </span>
-                </div>
-                <div className="flex px-2 py-2 bg-white text-black rounded-sm text-sm text-justify">
-                  Our IT products offer advanced security features and
-                  lightning-fast performance. Crafted by experts, they are built
-                  to support your business's growth and evolving needs.
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="w-full relative flex flex-col h-full">
-            <Image
-              src={"/images/product3.png"}
-              width={1400}
-              height={1000}
-              alt="who we are image"
-              className="h-full"
-            />
-            <div className="z-10">
-              <div className="absolute bottom-12 w-auto space-y-5">
-                <div>
-                  <span className="left-0 bg-primary px-2 py-2 text-white rounded-sm text-sm">
-                    Confidence Through Control
-                  </span>
-                </div>
-                <div className="flex px-2 py-2 bg-white text-black rounded-sm text-sm text-justify">
-                  Trust in our products to provide transparency and
-                  accountability. With cutting-edge tools and detailed reporting
-                  capabilities, we empower your business to embrace true digital
-                  transformation.
-                </div>
-              </div>
-            </div>
+        <div className="flex flex-col justify-center items-center gap-4 pb-4">
+          <div className="inline-block bg-primary text-white text-sm font-semibold px-4 py-2 rounded-full mb-4 animate-bounce hover:animate-none">
+            Skills & Technologies
           </div>
         </div>
-        <div className="hidden lg:block absolute -top-16 right-0 xl:-top-28 xl:right-0">
-          <Image
-            src={"/images/product-bg.png"}
-            width={500}
-            height={300}
-            quality={100}
-            alt="corner image"
-            className="lg:w-[180px] xl:w-[250px] h-auto object-cover"
-          />
+
+        {/* Swiper Carousel */}
+        <div className="flex justify-center py-4">
+          <Swiper
+            effect={"cards"}
+            grabCursor={true}
+            modules={[EffectCards]}
+            className="w-72 h-80"
+          >
+            {skills.map((skill, index) => (
+              <SwiperSlide
+                key={index}
+                className="flex flex-col items-center justify-center bg-white shadow-lg rounded-lg p-4"
+              >
+                <Image
+                  src={skill.img}
+                  alt={skill.name}
+                  width={100}
+                  height={100}
+                  className="object-contain"
+                />
+                <p className="mt-4 font-semibold">{skill.name}</p>
+              </SwiperSlide>
+            ))}
+          </Swiper>
         </div>
       </div>
     </section>

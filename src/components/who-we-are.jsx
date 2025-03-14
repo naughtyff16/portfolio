@@ -33,13 +33,15 @@ export default function () {
   return (
     <section
       id="solutions"
-      className="h-auto w-full bg-white text-black relative"
+      className="h-auto w-full bg-white text-black relative dark:bg-darkBg dark:text-darkText
+      border-t-2 border-transparent dark:border-t-primary 
+      dark:shadow-[0px_-5px_10px_#00bfff]"
     >
       <div className="container mx-auto py-12 px-4 md:px-12 lg:px-16 flex flex-col">
         <div className="flex flex-col gap-4 justify-center items-start lg:items-center pb-8">
           <p className="text-lg text-primary font-medium py-1">Who we are</p>
           <p className="text-3xl font-bold">Industries in which we operate</p>
-          <p className="text-sm font-normal text-gray-700">
+          <p className="text-sm font-normal">
             Operating across segments with tailored solutions for your needs.
           </p>
         </div>

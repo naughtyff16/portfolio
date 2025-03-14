@@ -5,46 +5,39 @@ import "react-responsive-carousel/lib/styles/carousel.min.css";
 import NextIcon from "./icons/next-icon";
 
 const Banner = [
+  // {
+  //   title: "Innovative Web Development with Next.js & React",
+  //   description:
+  //     "I specialize in creating high-performance, scalable web applications using Next.js, React, and the latest web technologies.",
+  //   buttonText: "Hire Me",
+  //   buttonURL: "/",
+  //   image: "/images/web-dev-img.png",
+  // },
   {
-    title: "Crafting Scalable Web Solutions with Next.js & Django",
+    title: "Crafting Engaging Product & Web Development with Next.js & React",
     description:
-      "I build modern, scalable, and high-performance web applications using cutting-edge technologies like Next.js, Django, and FastAPI.",
-    buttonText: "View My Projects",
-    // buttonURL: "/projects",
+      "As a Software Developer, I have worked on products like Gaming & OTT Platform and Real Estate Websites etc.., ensuring responsive design, efficient time management, and clean, maintainable code.",
+    buttonText: "Hire Me",
     buttonURL: "/",
-    // image: "/images/web-dev.png",
-    image: "/images/two-laptops.png",
+    image: "/images/web-dev-img.png",
   },
 
   {
-    title: "Machine Learning & AI for Real-World Applications",
+    title: "Data Analytics & Visualization with Python & Power BI",
     description:
-      "From ancient Tamil script recognition to intelligent detection systems, I leverage AI to solve real-world problems.",
-    buttonText: "Explore My AI Work",
+      "I specialize in data analysis using Jupyter Notebook, Python libraries like Pandas & NumPy, and creating insightful reports with Power BI.",
+    buttonText: "Explore My Work",
     buttonURL: "/",
-    // buttonURL: "/machine-learning",
-    // image: "/images/ml-ai.png",
-    image: "/images/two-laptops.png",
+    image: "/images/data-analyst-img.png",
   },
-  {
-    title: "Bridging Creativity & Code in Frontend Development",
-    description:
-      "I turn Figma designs into stunning, user-friendly interfaces using React, Tailwind CSS, and Next.js.",
-    buttonText: "See My UI/UX Work",
-    buttonURL: "/",
-    // buttonURL: "/frontend",
-    // image: "/images/frontend-design.png",
-    image: "/images/two-laptops.png",
-  },
+
   {
     title: "From Gaming to Code: My Journey in Free Fire & E-Sports",
     description:
       "With 700K+ subscribers on YouTube as Naughty FF, I blend gaming and content creation with software development expertise.",
     buttonText: "Check My E-Sports Journey",
     buttonURL: "/",
-    // buttonURL: "/gaming",
-    // image: "/images/gaming.png",
-    image: "/images/two-laptops.png",
+    image: "/images/my-img1.jpg",
   },
 ];
 
@@ -75,7 +68,7 @@ export default function HeroBanner() {
   };
 
   return (
-    <section className="relative w-full h-auto">
+    <section className="relative w-full h-auto dark:bg-darkBg dark:text-darkText">
       <Carousel
         className="max-w-full mx-auto"
         infiniteLoop={true}
@@ -97,42 +90,37 @@ export default function HeroBanner() {
           <div key={index} className="grid grid-cols-1 lg:grid-cols-3">
             <div className="flex flex-col container my-auto py-4 px-4 md:px-12 lg:px-16 text-start">
               <div className="border-l-8 border-primary pl-4 space-y-5">
-                <h1 className="text-3xl md:text-4xl xl:text-5xl font-bold text-black">
+                <h1 className="text-xl md:text-2xl xl:text-5xl font-bold">
                   {item.title}
                 </h1>
-                <p className="text-lg text-primary font-medium">
+                <p className="text-base text-primary font-medium">
                   {item.description}
                 </p>
-                <div className="bg-primary text-white text-sm px-5 py-2 rounded-sm inline-block">
-                  <Link href={item.buttonURL}>{item.buttonText}</Link>
+                <div className="flex">
+                  <Link
+                    href={item.buttonURL}
+                    className="bg-primary text-sm px-6 py-2 text-white rounded-sm hover:bg-transparent hover:text-black hover:border hover:border-primary dark:hover:text-white transition-all duration-300 ease-in-out transform hover:scale-110 hover:shadow-[0_0_10px_#00bfff]"
+                  >
+                    {item.buttonText}
+                  </Link>
                 </div>
               </div>
             </div>
 
-            <div className="relative w-full h-full col-span-1 lg:col-span-2 order-first lg:order-last">
-              <div className="absolute inset-0 bg-gradient-to-r from-black/15 to-transparent z-10"></div>
+            <div className="relative w-full h-[250px] md:h-[70vh] lg:h-[70vh] xl:h-[80vh] col-span-1 lg:col-span-2 order-first lg:order-last">
+              {/* <div className="absolute inset-0 bg-gradient-to-r from-black/15 to-transparent z-10"></div> */}
               <Image
                 src={item.image}
                 width={1400}
                 height={900}
                 quality={100}
                 alt="Banner"
-                className="w-full h-full object-cover"
+                className="w-full h-full"
               />
             </div>
           </div>
         ))}
       </Carousel>
-      <div className="hidden lg:block -z-10 absolute -bottom-16 left-4 xl:-bottom-14 xl:left-28 ">
-        <Image
-          src={"/images/hero-banner-bg.png"}
-          width={500}
-          height={300}
-          quality={100}
-          alt="corner image"
-          className=" lg:w-[350px] xl:w-[400px] h-auto object-cover"
-        />
-      </div>
     </section>
   );
 }

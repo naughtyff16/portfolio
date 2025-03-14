@@ -36,30 +36,42 @@ export default function () {
   };
 
   return (
-    <section className="w-full h-auto bg-white relative mx-auto py-12 px-4 md:px-12 lg:px-16">
+    <section
+      className="w-full h-auto bg-white relative mx-auto py-12 px-4 md:px-12 lg:px-16 dark:bg-darkBg dark:text-darkText
+      border-t-2 border-transparent dark:border-t-primary 
+      dark:shadow-[0px_-5px_10px_#00bfff]"
+    >
       <div className="mx-auto grid lg:grid-cols-2 gap-10">
         <div className="relative z-10">
           <div className="space-y-5">
-            <p className="text-lg text-primary font-medium py-1">
-              About Cloud Rudra Media
-            </p>
-            <h1 className="text-4xl font-bold text-black leading-tight">
-              Pioneers of digital innovation and information technology.
-            </h1>
-            <p className="text-lg text-black py-2">
-              Our basic philosophy is built on three fundamental pillars:
-            </p>
-            <p className="text-gray-700 leading-relaxed text-justify">
-              Innovative solutions, client satisfaction, and user experience.
-              These pillars serve as guiding beacons for all aspects of our
-              work. Our clients speak positively of Cloud Rudra Media. We
-              sincerely believe that innovation is the driving force behind
-              progress. We are committed to pushing the boundaries of what is
-              possible, continually looking for innovative ways to create
-              solutions that not just meet but surpass your expectations.
+            <div className="text-primary text-lg font-semibold animate-bounce hover:animate-none">
+              Passion for Content Creation
+            </div>
+            <h1 className="text-4xl font-bold leading-tight">Naughty FF</h1>
+            <p className="text-lg py-2">
+              Apart from coding, I'm also an{" "}
+              <span className="font-bold">
+                E-Sports player and a passionate content creator.
+              </span>{" "}
+              I run a{" "}
+              <span className="font-bold">
+                YouTube channel named "Naughty FF",
+              </span>{" "}
+              where I create engaging content around{" "}
+              <span className="font-bold">FreeFire E-Sports.</span> My
+              dedication to gaming and content creation has helped me earn the{" "}
+              <span className="font-bold">Silver Play Button</span> from YouTube
+              for surpassing{" "}
+              <span className="font-bold">100,000 subscribers.</span> This
+              journey has taught me{" "}
+              <span className="font-bold">
+                content creation, video editing, audience engagement, and
+                digital marketing skills
+              </span>{" "}
+              that complement my work as a developer.
             </p>
           </div>
-          <div className="mt-10 space-y-12 w-full mx-auto">
+          {/* <div className="mt-10 space-y-12 w-full mx-auto">
             {Details.map((detail, index) => (
               <div
                 key={index}
@@ -87,53 +99,28 @@ export default function () {
                 </div>
               </div>
             ))}
-          </div>
+          </div> */}
         </div>
 
         <div className="flex flex-col gap-8">
-          <p className="text-base text-gray-700 leading-relaxed">
-            At Cloud Rudra Media, we don’t simply offer IT consulting services;
-            we also develop revolutionary digital experiences that redefine
-            sectors and set new standards for excellence. Our purpose is
-            straightforward: to be your reliable partner in the ever-changing
-            field of technology-driven innovation.
-          </p>
-          <Image
-            src="/images/pioneer-digital-1.png"
-            width={1400}
-            height={1000}
-            alt="Digital Innovation"
-            className="rounded-lg w-full h-full object-cover"
-          />
-
-          <div className="relative w-full">
+          <div className="relative w-full h-[60vh] md:h-[70vh] lg:h-[80vh]">
             <Image
-              src="/images/poineer-digital-2.png"
+              src="/images/play-btn-img.jpg"
               width={1400}
               height={1000}
               alt="Digital Innovation"
-              className="rounded-lg w-full h-full object-cover"
+              className="rounded-lg w-full h-full object-cover object-[center_10%]"
             />
             <div className="absolute top-0 left-0 h-full w-1/2 bg-primary flex flex-col items-center justify-center text-white font-bold opacity-90 rounded-lg">
-              <span className="text-3xl md:text-8xl">20+</span>
-              <span className="text-xl md:text-3xl text-center">
-                years of Industry Expertise
+              <span className="text-3xl md:text-7xl">700K+</span>
+              <span className="text-xl md:text-2xl text-center">
+                YouTube Subscribers
               </span>
             </div>
           </div>
         </div>
-        <div className="hidden lg:block absolute bottom-0 left-0">
-          <Image
-            src={"/images/about-bg-3.png"}
-            width={500}
-            height={300}
-            quality={100}
-            alt="corner image"
-            className="w-full max-w-[400px] h-auto object-cover"
-          />
-        </div>
       </div>
-      {selectedDetail && (
+      {/* {selectedDetail && (
         <Popup
           open={true}
           closeOnDocumentClick={false}
@@ -157,7 +144,7 @@ export default function () {
             </div>
           </div>
         </Popup>
-      )}
+      )} */}
     </section>
   );
 }

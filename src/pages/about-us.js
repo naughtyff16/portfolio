@@ -1,6 +1,6 @@
 import Header from "@/components/header";
 import MainHeader from "@/components/main-header";
-import { Inter } from "next/font/google";
+import { Inter, Roboto_Serif } from "next/font/google";
 import Footer from "@/components/footer";
 import AboutusMore from "@/components/about/aboutus-more";
 import PioneerDigital from "@/components/about/pioneer-digital";
@@ -11,22 +11,29 @@ import CredibleSource from "@/components/about/credible-source";
 import Faq from "@/components/faq";
 import ScrollToTop from "@/components/scroll-to-top/scroll-to-top";
 import AboutBanner from "@/components/about/about-page-banner";
+import About from "@/components/about";
+import FourCardsSection from "@/components/services/four-cards-section";
+import WhyCrm from "@/components/services/why-crm";
 
-const inter = Inter({ subsets: ["latin"] });
-
-export default function AboutUs() {
+const inter = Roboto_Serif({ subsets: ["latin"] });
+export default function AboutUs({ darkMode, toggleDarkMode }) {
   return (
     <main className={`${inter.className}`}>
       <Header />
-      <MainHeader />
-      <AboutBanner />
-      <AboutusMore />
-      <PioneerDigital />
+      <MainHeader darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
+      {/* <AboutBanner /> */}
+      <About />
+      <FourCardsSection />
+      {/* <AboutusMore /> */}
+
+      <WhyCrm />
+
       <ServicesWeOffer />
-      <TwoColumn />
+      {/* <TwoColumn /> */}
       <WhyChooseUs />
-      <CredibleSource />
-      <Faq />
+      <PioneerDigital />
+      {/* <CredibleSource /> */}
+      {/* <Faq /> */}
       <Footer />
       <ScrollToTop />
     </main>

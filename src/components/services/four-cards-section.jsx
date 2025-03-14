@@ -4,55 +4,73 @@ import PartnershipIcon from "../icons/partnership-icon";
 import DigitalOceanIcon from "../icons/digital-ocean-icon";
 import React from "react";
 import Image from "next/image";
+import ServicesIcon1 from "../icons/services-icon-1";
+import ServicesIcon2 from "../icons/services-icon-2";
+import ServicesIcon3 from "../icons/services-icon-3";
 
 const Details = [
   {
     id: 1,
-    title: "Innovation at the Core",
+    title: "Frontend",
     description: [
       {
-        contents1: "Pioneering cutting-edge solutions",
-        contents2: "Embracing emerging technologies",
-        contents3: "Driving digital transformation",
+        contents1: "Next.js",
+        contents2: "React.js",
+        contents3: "Redux",
+        contents4: "JavaScript",
+        contents5: "HTML",
+        contents6: "Tailwind CSS",
       },
     ],
-    icon: <InnovationIcon />,
+    icon: <ServicesIcon1 />,
   },
   {
     id: 2,
-    title: "Simplifying Complexity",
+    title: "Backend",
     description: [
       {
-        contents1: "Unraveling intricate challenges",
-        contents2: "Unraveling intricate challenges Streamlining processes",
-        contents3: "Delivering user-friendly solutions",
+        contents1: "Django",
+        contents2: "Flask",
+        contents3: "FastAPI",
+        contents4: "Python",
+        contents5: "PostgreSQL",
+        contents6: "MongoDB",
+        contents7: "Strapi CMS",
       },
     ],
-    icon: <UserCheckIcon />,
+    icon: <ServicesIcon2 />,
+    icon: <ServicesIcon3 />,
   },
   {
     id: 3,
-    title: "Partnering for Success",
+    title: "Data Analysis",
     description: [
       {
-        contents1: "Pioneering cutting-edge solutions",
-        contents2: "Embracing emerging technologies",
-        contents3: "Driving digital transformation",
+        contents1: "Python (Pandas, NumPy, MatPlotLib)",
+        contents2: "TensorFlow",
+        contents3: "PowerBI",
+        contents4: "Jupyter NoteBook",
+        contents5: "MySQL",
+        contents6: "Excel",
       },
     ],
-    icon: <PartnershipIcon />,
+    icon: <ServicesIcon2 />,
   },
   {
     id: 4,
-    title: "Innovation at the Core",
+    title: "Tools & Technologies",
     description: [
       {
-        contents1: "Pioneering cutting-edge solutions",
-        contents2: "Embracing emerging technologies",
-        contents3: "Driving digital transformation",
+        contents1: "API Development",
+        contents2: "Git, Github",
+        contents3: "Bitbucket",
+        contents4: "Jira",
+        contents5: "Trello",
+        contents6: "Postman",
+        contents7: "Figma",
       },
     ],
-    icon: <DigitalOceanIcon />,
+    icon: <InnovationIcon />,
   },
 ];
 
@@ -60,34 +78,32 @@ export default function () {
   return (
     <section
       id="solutions"
-      className="h-auto w-full bg-[#F6F3F3] relative mx-auto py-12 px-4 md:px-12 lg:px-16"
+      className="h-auto w-full bg-[#F6F3F3] dark:bg-darkBg dark:text-darkText border-t-2 border-transparent dark:border-t-primary 
+                 dark:shadow-[0px_-5px_10px_#00bfff] relative mx-auto py-12 px-4 md:px-12 lg:px-16"
     >
       <div className="container flex flex-col">
         <div className="flex flex-col gap-4 justify-center items-start lg:items-center z-10 pb-8">
-          <p className="text-lg text-primary font-medium py-1">
-            Welcome to Cloud Rudra Media
-          </p>
-          <p className="text-3xl font-bold">
-            Power Your Business with Technology
-          </p>
+          <div className="inline-block bg-primary text-white text-sm font-semibold px-4 py-2 rounded-full animate-bounce hover:animate-none">
+            My Skills & Expertise
+          </div>
         </div>
         <div className="flex flex-col lg:flex-row w-full h-auto gap-14 xl:gap-20 z-10 items-center justify-center">
           {Details.map((details, index) => (
             <div
               key={index}
-              className="bg-white hover:border-l-4 hover:border-l-primary w-[300px] h-full  p-5"
+              className="bg-white dark:bg-primary dark:hover:border-l-white hover:border-l-4 hover:border-l-primary w-[300px] h-full  p-5"
             >
               <div className="flex flex-col items-center lg:items-start space-y-5">
-                <div>{details.icon}</div>
-                <h3 className=" italic text-lg text-black font-medium">
-                  {details.title}
-                </h3>
-                <ul className="list-disc pl-5 space-y-5 text-secondary text-sm">
+                <div className="text-primary dark:text-white">
+                  {details.icon}
+                </div>
+                <h3 className=" italic text-lg font-medium">{details.title}</h3>
+                <ul className="list-disc pl-5 space-y-5 text-sm">
                   {details.description.map((desc, idx) => (
                     <React.Fragment key={idx}>
-                      <li>{desc.contents1}</li>
-                      <li>{desc.contents2}</li>
-                      <li>{desc.contents3}</li>
+                      {Object.values(desc).map((content, idx) => (
+                        <li key={idx}>{content}</li>
+                      ))}
                     </React.Fragment>
                   ))}
                 </ul>
